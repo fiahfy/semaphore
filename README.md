@@ -89,7 +89,7 @@ If a callback is given, a permit is released automatically after a given callbac
 
 #### callback
 
-Type: `IcnsImage`  
+Type: `Function`  
 Default: `undefined`
 
 Holds a permit until a callback is finished.
