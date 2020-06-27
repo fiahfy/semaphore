@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD024 -->
-
 # semaphore
 
 ![badge](https://github.com/fiahfy/semaphore/workflows/Node.js%20Package/badge.svg)
