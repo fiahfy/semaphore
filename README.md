@@ -38,11 +38,13 @@ import { semaphore } from '@fiahfy/semaphore'
 const s = semaphore()
 
 const heavyFunc = () => {
-  return s.acquire(() => {
-    console.log('heavy process')
-  }).then(() => {
-    console.log('released')
-  })
+  return s
+    .acquire(() => {
+      console.log('heavy process')
+    })
+    .then(() => {
+      console.log('released')
+    })
 }
 ```
 
@@ -61,7 +63,8 @@ setTimeout(() => {
   s.release() // increment permit
 }, 100)
 
-s.acquire().then(() => { // wait until permit is available
+s.acquire().then(() => {
+  // wait until permit is available
   console.log('third')
 })
 ```
