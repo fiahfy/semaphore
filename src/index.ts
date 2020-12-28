@@ -24,7 +24,7 @@ export const semaphore = (
 
   return {
     acquire: async (callback?: () => Promise<void>): Promise<void> => {
-      await new Promise((resolve) => {
+      await new Promise<void>((resolve) => {
         queues.push(resolve)
         setTimeout(async () => {
           acquire()
